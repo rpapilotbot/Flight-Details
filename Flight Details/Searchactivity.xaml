@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Searchactivity" this:Searchactivity.in_Browse="https://www.skyscanner.co.in/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browse" Type="InArgument(x:String)" />
+    <x:Property Name="in_FromData" Type="InArgument(x:String)" />
+    <x:Property Name="in_ToData" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>891,453</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Searchactivity_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Selecting the search Box in the Browser " DisplayName="Searchactivity" sap:VirtualizedContainerService.HintSize="376,305" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Selecting the search box &quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Skyscanner Travel: Compare Cheap Flight Tickets, Hotels &amp; Rental Cars" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e4d3a9c-b5d6-41e4-a0b2-5d35700223e4" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="418,1202" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="376,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[in_FromData+in_ToData]" />
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,984" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'From'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6e4d3a9c-b5d6-41e4-a0b2-5d35700223e4" Text="[in_FromData+&quot;[k(enter)]&quot;]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.skyscanner.co.in/" DesignTimeRectangle="407, 367, 181, 36" ElementType="InputBox" FriendlyName="'Dubai (DXB)'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='From' /&gt;" Guid="f7879185-4138-4158-a58e-0d26512250ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALkAAAAoCAYAAACil1u6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPHSURBVHhe7Z2xS1tBHMdL/wP9J+rgEAjEIUIH4UGWKh3eFkFEcKiQQZvFEijBJSmSUjoozaIdJIIkFCwJVhykkAwlGcQsGocMgkOQDEkdvr177+XlJTG1NAn6ju8HfvDu7uXuhM+797sLxGfPxyfBYKgclJyhfHRI/nb9Aw4OjpDJHDMYyoQt+UZsC7mjn2g2f4MQlbAllys4BScqYksul3VCVISSE+Wh5ER5KDlRHkpOlIeSE+Wh5ER5KDlRHkpOlIeSE+VRRPImymdV63oE1C9RvrKuiesYSPLr/RBe+IOYfR3ElDcAfTWFYs1q/BvVNOZjJavwj/zaFePsomgV2zSR3xRzCP9ARZTyMR88mpyTDo9Xx0rsFJU7887KXgiaGLdhFoFGCXFtETsX4lrOaSJg/C0yNE18duvcuLdxkcKSN4QURXclA0s+v39jlYBaIQn9VQL5ulXRj/+RvB+lJLSFtCG4REoeL5jX8gGofItidrnVXkVqOSjam0ZbPqZjfs96A8g5iX6uzZJA3Lswh0+tacpx9JQ9DnEPQ5VcUv4StOpuhCRCeLNaIMtiNZROSaHCu0hFFjGrBeDxh7BdkuJJqsiK+im/Ds0fwJK1mvZKaFL8PIf149ZnuyWXNJENT7frrtJY0hLI5hIO+QXd/d9dYlu35msgpA86y8QtDF1yFBIYM1bpBySfcLz+awVEtSiyItVpHCfsNMEU1FpN+0jeLXWv5L3zlOWxccf4Etn/uE/Ut0PfumynNmIuJxFfT9/k6fN4km902mLLWT/HzqpYySfM3FrzWvVDk1zKOiPy9RmsHd5adYKe/m9xsqFjLde+576+ydPn8dKVPpIXN6c75Dt57xtQ8s50pXb4Dp7IKRp1+fYIIdNKP+7r335gTSi5OxnhxvMW2dUgts+MJpELp0Q68HC6Ykies3JsWf/SN4DkXRvP6ncjH29tjBtC4nZbd/9iY7oxh5VvrQeO6YpbGVjyjiPESBplxxFi4yKNFf8MpkTaoUeSiLY2blKocNJIS3o2njeniOsB8Rmx8VxKIh7ymRvLPpLLjadz5ZeSdxwhfizg2jhCdJ6stHCcsBgPnuMIUaQzesQ8ljQxN56Z7gmQJ89Akj8Juo4QR4Vc9eU4dNx9uF9ymZJ8DWHqjRDd+tJn2DRKu9D9YWT4ZZArUUByk+tq1ynPMKlXURlh92S0KCM5If2g5ER5KDlRHkpOlIeSE+Wh5ER5KDlRHkpOlMeWnD/dTFTFlpw/wk9UxZZcBv+dCkPF6JCcwVAxKDlD8ZjEH2lny8D9yc1rAAAAAElFTkSuQmCC" InformativeScreenshot="46eb32a3e94902ee243544b5f4eaecd1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Skyscanner Travel: Compare Cheap Flight Tickets, Hotels &amp;amp; Rental Cars' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="407, 355, 181, 12" ElementType="Text" FriendlyName="'From'" FullSelectorArgument="&lt;webctrl aaname='From' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='From' tag='LABEL' type='' check:text='From' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALkAAAAQCAYAAABKvt56AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE3SURBVGhD7dcxasJgGMbx4hF6DrfcoEs3L+AFdA9xaHB0MLh0LDg6WBCLoEsxgg7xBBkEA4JLsaC4NNbhaT6NSYPEdou+PB/8xCRvzPInfN7l7vMgkoyRk3iMnMRj5CReGLkFe4PEclvnw0S3KBE5wyaJLkTegate6Xv1scKgbmGw8NUB4C9hP5ejma/DaR/eYqW+AB9j6NHvEGUrZbsyRzMM2Gsb0ApVvLpByZ9TmA+PKLaXQdMuGqeZNwOmswU2U+iFPjxsYVfOH0aUhUTkKtZiSSlDOwQcxPp0HGzOgPXECm88XYtn9EkQ+azz61r8EKIs/bFdiWM1nbQ3OSOn6/bvyHNa2p6ckdN1CyMnkouRk3iMnMRLRG6YDXS7Q/R6IyIxoshr1gvehw52u+/jn0suLhEL+AHPNXInhx3f3gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'To'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="6e4d3a9c-b5d6-41e4-a0b2-5d35700223e4" Text="[in_ToData+&quot;[k(enter)]&quot;]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.skyscanner.co.in/" DesignTimeRectangle="619, 367, 181, 36" ElementType="InputBox" FriendlyName="'Chennai (MAA)'" FullSelectorArgument="&lt;webctrl id='fsc-destination-search' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fsc-destination-search' tag='INPUT' type='text' aaname='To' /&gt;" Guid="88289acb-6d95-46b5-89fa-cc9cfed6bb2f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALkAAAAoCAYAAACil1u6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR4SURBVHhe7Z3BSxtbFIfl/Qfmn0gWXRQCcZFAFoWAm1q6mJ0BkWyKQhaWbCzCI7yFER4ReUIlQrGuxoUNQsUHihQpJItiVtaFpotZBFwEcTHi4vfOmbmTzJ2XFipJ+t7lfHDwzlxnMjHfOffMZOHEb7EnkJAwOURyCeNjol4/gYSEacFyB+MJKHhDEEwhkJwRyQUjEckF4xHJBeMRyQXjEckF4xHJBeMRyQXjEckF4xHJBeMRyQXjEckF4xHJQ7iXF2ir8Ui5u8bXb2osjJzhSk4fXr1SxFTawkz6GaYKVdQv7/055wPylZY//mW0sPVyFltf1GYIt7mJmedlHJF8nb0iJhNvcHSjJhXn6y8wGauiobY93CbKiRSsXUftiHBlw4plUP6k/g6ES/sKySJsEX0sDFHya+xYFsp/h8zonKGcs7DBbv8nJP8eF9jI9aVjyeOJjC7u3RmWkxnEI5J3D0rILr1B/qU9cBXgxFik+fjKGVy1z6O1jZw1+BhhuAxNcvdkFfHfm/oHSbifN2HVLnzJ/zhEY71IFdPC0+Q8Npr96tb9vI0CJcRMbppWgG00glxpVpGvHWKrMEtzz/DUork7nriBPVeF/XEVFp1vKjmNxf1Aynucvy0hl572wlo5VjLxMSRztOiScNmQhCx5vmZjOUdCq53t3XmS3saaJjmf7wUl8Q3qC/xT7e7RwlqihHqHkihLP7WVwYE9O+BahKEzNMnP/8ygsB9Z38Ow5DESu6XE/kbbqvq5XzapyjfR9We8ucLzbZzzmCSfzFZxqiY7+yXMvLumEQuWQj6otg8kVHYVpyzlpY3FntjA19osXn+8pdF3JOfXCK0ynuR7jl+FD/g4rvTcvtBrhCXnVkS9B67o0SR3P1Hiq+Thc+ktzT1OV1JYa/pbwugYr+RLx32RucopYRqVFPW60VAykoDZv2glCOgJycKSeL0ThgV2cFqhSp5MIZ6mFSCdIWn52n5Gcvr9m0MsUkvRoMTKrvM16JJr4naP8Tqhkszjlqp7qBfn1SLSnvD7FslHz3jbFa0n1yVfPum3LozbvfXPRQL6gio0yaOtgy9wZ59aorf9xGjvvnqc5FRtGxWL+vOg1QhLzi3Iv5PTr/wEJ0hkbjKmtzQi+XgYw43nPHauaPwDyV2SLDtHVe7Bn+Ht3k3ZYyWvcUtDPDjY4bbmUZITzhm29i5U8oaumVuRhcPQykRwtZ77gA4NuYf3q38fr6XpvY60K+NiiJIT2iNEuulb+NEjRH3pbx/QDSQfM+jG8ycl5+vYKdJ56EY2Z61ibYVall4fP0ByljPUSmmSawTXfIujJf2xoA8llMVJzVVeJXcYftyYDFoa/8azzhkhjJThSv6/RX+EOA681UpVfWG0iOQK7wuadAn2VbQ6Dx+39Z5WLerz5cugsSCSh+k4eo89Ku4ctAd1Q8JIEMkF4xHJBeMRyQXjEckF4xHJBeMRyQXjEckF4xHJBeMRyQXjEckF49Ek54GEhGkRSM4h/xhLwvgQySUMjyf4B0ePzqL0TH8BAAAAAElFTkSuQmCC" InformativeScreenshot="2935e958d42e1cdc5f87ede99048cd1f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Skyscanner Travel: Compare Cheap Flight Tickets, Hotels &amp;amp; Rental Cars' /&gt;" SearchSteps="Selector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="619, 355, 181, 12" ElementType="Text" FriendlyName="'To'" FullSelectorArgument="&lt;webctrl aaname='To' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='To' tag='LABEL' type='' check:text='To' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALkAAAAQCAYAAABKvt56AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVGhD7dYrDsJAFEbhhiWwDhw7wLAIVoDHtTtoMHhkBaKmAlkEgq6gogmCBEkCQdX9tAwkU4JAlptzky/pW51OJhgMRwIsI3KYR+Qwj8hhnos8LHTVx1Tp1xeA/xArv7mUuyt5cpRuhRb+NeAvucjL5HO74kc+jrU91e5XqM/KV3PvA0Df/RB5dGgCvxSKJlPNNucm9FJL/1mg136IfF1J1338upeq1F156D0L9BorOcxjTw7zXOTtdCMHDCJymEfkMC/Isp0Aa9q438eB25rrecIwVuYduSQ9ALEsMZ/YVWCmAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Search flights'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e4d3a9c-b5d6-41e4-a0b2-5d35700223e4" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.skyscanner.co.in/" DesignTimeRectangle="1019, 418, 174, 35" ElementType="Button" FriendlyName="'Search flights'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Search flights ' check:text='Search flights' /&gt;" Guid="fa197abd-7c3d-49b8-aa85-21ec5d3f9d1e" ImageBase64="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" InformativeScreenshot="16231488ff1618e91e230a5410e17996.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Skyscanner Travel: Compare Cheap Flight Tickets, Hotels &amp;amp; Rental Cars' /&gt;" SearchSteps="Selector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_FromData+in_ToData]" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended Selecting Search box &quot;]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVDhPrVM9S8NQFH2FkhYVf4Cb/0F0dPYnuIggShXb2lYEJ3FxqB8UBCcL4u4kIoqKi624OLi3TVMlcai0RsXpeM9Lqq1asWjgwMm559zc3JeocMIqhBNONRy3OoOXKahQ3HRDCw8IpZzOwEzMdDlBVQtzVmeQDCf5toEhEB1qpqxBTq3Z07aBEZdgxERguoyhVVuDnBprPzYIRMvona8gm3dhRC1snj9qkFNjjZ62DbqT8vTxEvZvXpCR4MpRTYOcGmv0fGlgyI2SMXevnrBz6WJQxs5euBhI2xrk1Fijh15mWiYIymh9i7fYzrlIn9ShRotQYyUPwqmxRg+9ra+QdNAlm+5fusPI1j2WD2vYOKtj/dQDOTXW6KGXmfcGgVkbwxkH+eIr9q6fsXZcw4G8c+Mip8YaPfQy87ED6daTqnhLnDKhJmTsSVMbCXKtSY0eeplp2QHPOBjzN+xDRXj+/rH5oEd/D5+X2Gz6FRoN/uNn+sPvbBXeAFBBfo2ZYd31AAAAAElFTkSuQmCC" InformativeScreenshot="9eb4674510750385e7397a9869b2ab28.png" Selector="&lt;html app='chrome.exe' url='https://www.skyscanner.co.in/' /&gt;" Url="[in_Browse]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
